@@ -1,0 +1,354 @@
+body {
+    padding: 0;
+    overflow: hidden;
+    font-family: helvetica, georgia, sans-serif;
+}
+
+/* MAP */
+
+.map {
+   position: absolute;
+   right: 0px;
+   left: 0px;
+   top: 50px;
+   bottom: 100px;
+}
+
+ /* TOP BAR */
+
+.topHeader {
+  color: white;
+  font-family: georgia;
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+  bottom: 2px;
+}
+
+
+.boro {
+    position: absolute;
+    right: 60px;
+    top: 5px;
+}
+
+#dropdownMenu1 {
+  background-color: white;
+  font-family: georgia;
+}
+
+#manhattan {
+  font-family: georgia;
+}
+
+#brooklyn {
+  font-family: georgia;
+}
+
+#queens {
+  font-family: georgia;
+}
+
+#bronx {
+  font-family: georgia;
+}
+
+.topBar {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   height: 50px;
+   background-color: black;
+}
+
+.help-tip{
+	position: absolute;
+	top: 10px;
+	right: 18px;
+	text-align: center;
+	background-color: #BCDBEA;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	font-size: 14px;
+	line-height: 26px;
+	cursor: default;
+}
+
+.help-tip:before{
+	content:'?';
+	font-weight: bold;
+	color:#fff;
+}
+
+.help-tip:hover p{
+	display:block;
+	transform-origin: 100% 0%;
+
+	-webkit-animation: fadeIn 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{	/* The tooltip */
+	display: none;
+	text-align: left;
+	background-color: #c5cbd6;
+	padding: 20px;
+	width: 300px;
+	position: absolute;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	right: -4px;
+	color: black;
+	font-size: 13px;
+  font-family: georgia;
+	line-height: 1.4;
+  z-index: 1;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+	position: absolute;
+	content: '';
+	width:0;
+	height: 0;
+	border:6px solid transparent;
+	border-bottom-color:#1E2021;
+	right:10px;
+	top:-12px;
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+	width:100%;
+	height:40px;
+	content:'';
+	position: absolute;
+	top:-40px;
+	left:50px;
+}
+
+ /* SIDE BAR */
+
+.sidebar {
+    position: absolute;
+    left: 10px;
+    width: 250px;
+    top: 160px;
+    height: 320px;
+    padding: 15px;
+    padding-bottom: 20px;
+    background-color: black;
+    z-index: 1;
+ }
+
+.rentHeader {
+  color: white;
+  font-family: georgia;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.rentSubHeader {
+  color: white;
+  font-family: georgia;
+  font-size:10px;
+}
+
+#name {
+  font-family: georgia;
+}
+
+#rent {
+  font-family: georgia;
+}
+
+#studio {
+  font-family: georgia;
+}
+
+#bed1 {
+  font-family: georgia;
+}
+
+#bed2 {
+  font-family: georgia;
+}
+
+#bed3 {
+  font-family: georgia;
+}
+
+ /* BOTTOM BAR */
+
+.bottomHeader {
+  color: white;
+  font-size: 25px;
+  font-family: georgia;
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+.bottomBar {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   height: 100px;
+   background-color: black;
+}
+
+.btn-circle {
+ border-radius: 50%;
+}
+
+#line1 {
+  background-color: #ef3e34;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line2 {
+  background-color: #ef3e34;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line3 {
+  background-color: #ef3e34;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line4 {
+  background-color: #4cba48;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line5 {
+  background-color: #4cba48;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line6 {
+  background-color: #4cba48;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#line7 {
+  background-color: #9167e0;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineA {
+  background-color: #2161d1;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineC {
+  background-color: #2161d1;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineE {
+  background-color: #2161d1;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineB {
+  background-color: #e59732;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineD {
+  background-color: #e59732;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineF {
+  background-color: #e59732;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineM {
+  background-color: #e59732;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineN {
+  background-color: #e8e243;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineQ {
+  background-color: #e8e243;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineR {
+  background-color: #e8e243;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineJ {
+  background-color: #96610c;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineZ {
+  background-color: #96610c;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineG {
+  background-color: #65d882;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#lineL {
+  background-color: #c6d1d3;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+}

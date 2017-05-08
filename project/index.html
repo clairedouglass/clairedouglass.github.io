@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css" /> -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="topBar">
+      <h2 class=topHeader>New York City Subway Rent Explorer</h2>
+      <div class="boro">
+        <div class="dropdown" id="boroSelect">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Zoom to Borough
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#" id="manhattan">Manhattan</a></li>
+            <li><a href="#" id="brooklyn">Brooklyn</a></li>
+            <li><a href="#" id="queens">Queens</a></li>
+            <li><a href="#" id="bronx">Bronx</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="help-tip">
+         <p>Rental data aggregated from the 2015 American Community Survey by census tract. Data may not be availale for all census tracts.</p>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <h1>Title Here</h1>
+            <h2 style="color:black">HEADER</h2> -->
+            <p class="rentHeader">View Rent by Stop</p>
+            <p class="rentSubHeader">Click on subway stops to view rental information by census tract</p>
+            <div class="input-group">
+              <input id="name" type="text"
+                     class="form-control"
+                     placeholder="Subway Stop"
+                     disabled>
+              <input id="rent" type="text"
+                     class="form-control"
+                     placeholder="Median Rent"
+                     disabled>
+              <input id="studio" type="text"
+                     class="form-control"
+                     placeholder="Studio"
+                     disabled>
+              <input id="bed1" type="text"
+                     class="form-control"
+                     placeholder="1 Bedroom"
+                     disabled>
+              <input id="bed2" type="text"
+                     class="form-control"
+                     placeholder="2 Bedroom"
+                     disabled>
+              <input id="bed3" type="text"
+                     class="form-control"
+                     placeholder="3 Bedroom"
+                     disabled>
+            </div>
+          </div>
+          <!-- Bottom Bar -->
+    <div class="bottomBar">
+        <h2 class="bottomHeader">Select a Subway Line</h2>
+        <button type="button" class="btn btn-default btn-circle" id="line1">1</button>
+        <button type="button" class="btn btn-default btn-circle" id="line2">2</button>
+        <button type="button" class="btn btn-default btn-circle" id="line3">3</button>
+        <button type="button" class="btn btn-default btn-circle" id="line4">4</button>
+        <button type="button" class="btn btn-default btn-circle" id="line5">5</button>
+        <button type="button" class="btn btn-default btn-circle" id="line6">6</button>
+        <button type="button" class="btn btn-default btn-circle" id="line7">7</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineA">A</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineC">C</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineE">E</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineB">B</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineD">D</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineF">F</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineM">M</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineN">N</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineQ">Q</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineR">R</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineJ">J</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineZ">Z</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineG">G</button>
+        <button type="button" class="btn btn-default btn-circle" id="lineL">L</button>
+    </div>
+    </div>
+    <!-- Map -->
+    <div id="map" class="map">
+      <!-- <div id="time-window"></div> -->
+    </div>
+    <!-- Javascript Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js"></script> -->
+    <script src="js/setup.js"></script>
+  </body>
+</html>
