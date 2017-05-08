@@ -7,7 +7,7 @@ var app = {
   drawnItems: new L.FeatureGroup()
 };
 
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   minZoom: 0,
@@ -186,48 +186,48 @@ var nycLines = cartodb.createLayer(app.map, {
 });
 
 //create setsql statments to filter subway lines
-var sqlLine1 = "SELECT * FROM subway_lines WHERE name like '%1%'";
-var sqlLine2 = "SELECT * FROM subway_lines WHERE name like '%2%'";
-var sqlLine3 = "SELECT * FROM subway_lines WHERE name like '%3%'";
-var sqlLine4 = "SELECT * FROM subway_lines WHERE name like '%4%'";
-var sqlLine5 = "SELECT * FROM subway_lines WHERE name like '%5%'";
-var sqlLine6 = "SELECT * FROM subway_lines WHERE name like '%6%'";
-var sqlLine7 = "SELECT * FROM subway_lines WHERE name like '%7%'";
-var sqlLineA = "SELECT * FROM subway_lines WHERE name like '%A%'";
-var sqlLineC = "SELECT * FROM subway_lines WHERE name like '%C%'";
-var sqlLineE = "SELECT * FROM subway_lines WHERE name like '%E%'";
-var sqlLineB = "SELECT * FROM subway_lines WHERE name like '%B%'";
-var sqlLineD = "SELECT * FROM subway_lines WHERE name like '%D%'";
-var sqlLineF = "SELECT * FROM subway_lines WHERE name like '%F%'";
-var sqlLineM = "SELECT * FROM subway_lines WHERE name like '%M%'";
-var sqlLineN = "SELECT * FROM subway_lines WHERE name like '%N%'";
-var sqlLineQ = "SELECT * FROM subway_lines WHERE name like '%Q%'";
-var sqlLineR = "SELECT * FROM subway_lines WHERE name like '%R%'";
-var sqlLineJ = "SELECT * FROM subway_lines WHERE name like '%J%'";
-var sqlLineZ = "SELECT * FROM subway_lines WHERE name like '%Z%'";
-var sqlLineG = "SELECT * FROM subway_lines WHERE name like '%G%'";
-var sqlLineL = "SELECT * FROM subway_lines WHERE name like '%L%'";
+var sqlLine1 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%1%'";
+var sqlLine2 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%2%'";
+var sqlLine3 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%3%'";
+var sqlLine4 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%4%'";
+var sqlLine5 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%5%'";
+var sqlLine6 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%6%'";
+var sqlLine7 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%7%'";
+var sqlLineA = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%A%'";
+var sqlLineC = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%C%'";
+var sqlLineE = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%E%'";
+var sqlLineB = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%B%'";
+var sqlLineD = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%D%'";
+var sqlLineF = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%F%'";
+var sqlLineM = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%M%'";
+var sqlLineN = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%N%'";
+var sqlLineQ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%Q%'";
+var sqlLineR = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%R%'";
+var sqlLineJ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%J%'";
+var sqlLineZ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%Z%'";
+var sqlLineG = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%G%'";
+var sqlLineL = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subway_lines WHERE name like '%L%'";
 //create setsql statments to filter subway stops
-var sqlStops1 = "SELECT * FROM substopstracts WHERE line like '%1%'";
-var sqlStops2 = "SELECT * FROM substopstracts WHERE line like '%2%'";
-var sqlStops3 = "SELECT * FROM substopstracts WHERE line like '%3%'";
-var sqlStops4 = "SELECT * FROM substopstracts WHERE line like '%4%'";
-var sqlStops5 = "SELECT * FROM substopstracts WHERE line like '%5%'";
-var sqlStops6 = "SELECT * FROM substopstracts WHERE line like '%6%'";
-var sqlStops7 = "SELECT * FROM substopstracts WHERE line like '%7%'";
-var sqlStopsA = "SELECT * FROM substopstracts WHERE line like '%A%'";
-var sqlStopsC = "SELECT * FROM substopstracts WHERE line like '%C%'";
-var sqlStopsE = "SELECT * FROM substopstracts WHERE line like '%E' OR line like '%E-%'";
-var sqlStopsB = "SELECT * FROM substopstracts WHERE line like '%B%'";
-var sqlStopsD = "SELECT * FROM substopstracts WHERE line like '%D%'";
-var sqlStopsF = "SELECT * FROM substopstracts WHERE line like '%F%'";
-var sqlStopsM = "SELECT * FROM substopstracts WHERE line like '%M%'";
-var sqlStopsN = "SELECT * FROM substopstracts WHERE line like '%N%'";
-var sqlStopsQ = "SELECT * FROM substopstracts WHERE line like '%Q%'";
-var sqlStopsR = "SELECT * FROM substopstracts WHERE line like '%R%'";
-var sqlStopsJ = "SELECT * FROM substopstracts WHERE line like '%J%'";
-var sqlStopsZ = "SELECT * FROM substopstracts WHERE line like '%Z%'";
-var sqlStopsG = "SELECT * FROM substopstracts WHERE line like '%G%'";
-var sqlStopsL = "SELECT * FROM substopstracts WHERE line like '%L%'";
+var sqlStops1 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%1%'";
+var sqlStops2 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%2%'";
+var sqlStops3 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%3%'";
+var sqlStops4 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%4%'";
+var sqlStops5 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%5%'";
+var sqlStops6 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%6%'";
+var sqlStops7 = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%7%'";
+var sqlStopsA = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%A%'";
+var sqlStopsC = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%C%'";
+var sqlStopsE = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%E' OR line like '%E-%'";
+var sqlStopsB = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%B%'";
+var sqlStopsD = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%D%'";
+var sqlStopsF = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%F%'";
+var sqlStopsM = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%M%'";
+var sqlStopsN = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%N%'";
+var sqlStopsQ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%Q%'";
+var sqlStopsR = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%R%'";
+var sqlStopsJ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%J%'";
+var sqlStopsZ = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%Z%'";
+var sqlStopsG = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%G%'";
+var sqlStopsL = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts WHERE line like '%L%'";
 //return no census tracts
-var sqlTracts = "SELECT * FROM censustracts WHERE boro_code = '6'";
+var sqlTracts = "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM censustracts WHERE boro_code = '6'";
