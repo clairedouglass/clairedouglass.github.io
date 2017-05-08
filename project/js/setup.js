@@ -45,7 +45,7 @@ var nycLines = cartodb.createLayer(app.map, {
     {
       sql: "SELECT * FROM substopstracts",
       cartocss: '#layer {marker-width: 8; marker-fill: black; marker-fill-opacity: 0.9; marker-line-color: #FFF; marker-line-width: 1; marker-line-opacity: 1; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; }',
-      interactivity: 'cartodb_id, name, grossrent, studio, x1bed, x2bed, x3bed, the_geom, boro_ct_20'
+      interactivity: 'cartodb_id, name, line, grossrent, studio, x1bed, x2bed, x3bed, the_geom, boro_ct_20'
     },
     {
       sql: "SELECT * FROM censustracts",
@@ -172,6 +172,7 @@ var nycLines = cartodb.createLayer(app.map, {
      var lng = latlng[1];
      app.map.setView([lat, lng], 15);
      $('#name').val('Name: ' + data.name);
+     $('#line').val('Subway Lines: ' + data.line);
      $('#rent').val('Gross Rent: ' + '$' + data.grossrent);
      $('#studio').val('Studio: ' + '$' + data.studio);
      $('#bed1').val('1 Bed: ' + '$' + data.x1bed);
