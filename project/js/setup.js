@@ -52,7 +52,8 @@ var nycLines = cartodb.createLayer(app.map, {
       cartocss: '#censustracts {polygon-fill: #374C70; polygon-opacity: 0.5; polygon-gamma: 0.5; line-color: #FFF; line-width: 1; line-opacity: 0.5; line-comp-op: soft-light; }',
       interactivity: 'boro_ct_20'
     }
-  ]
+  ],
+  https: true
   })
   .addTo(app.map)
   .on('done', function(layer) {
