@@ -7,7 +7,7 @@ var app = {
   drawnItems: new L.FeatureGroup()
 };
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: 'abcd',
   minZoom: 0,
@@ -39,16 +39,16 @@ var nycLines = cartodb.createLayer(app.map, {
   interactivity: true,
   sublayers: [
     {
-      sql: "SELECT * FROM subwaylines",
+      sql: "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM subwaylines",
       cartocss: '#subwaylines {line-width: 2; line-color: #0B645E; polygon-fill: #fff; polygon-opacity: 0; line-opacity: 1;}',
     },
     {
-      sql: "SELECT * FROM substopstracts",
+      sql: "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM substopstracts",
       cartocss: '#layer {marker-width: 8; marker-fill: black; marker-fill-opacity: 0.9; marker-line-color: #FFF; marker-line-width: 1; marker-line-opacity: 1; marker-placement: point; marker-type: ellipse; marker-allow-overlap: true; }',
       interactivity: 'cartodb_id, name, line, grossrent, studio, x1bed, x2bed, x3bed, the_geom, boro_ct_20'
     },
     {
-      sql: "SELECT * FROM censustracts",
+      sql: "https://" + clairedouglass + ".carto.com:443/api/v2/sql?q=SELECT * FROM censustracts",
       cartocss: '#censustracts {polygon-fill: #374C70; polygon-opacity: 0.5; polygon-gamma: 0.5; line-color: #FFF; line-width: 1; line-opacity: 0.5; line-comp-op: soft-light; }',
       interactivity: 'boro_ct_20'
     }
